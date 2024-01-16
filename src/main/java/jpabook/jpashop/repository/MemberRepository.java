@@ -9,15 +9,15 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-@RequiredArgsConstructor
+@RequiredArgsConstructor // 생성자 주입 어노테이션
 public class MemberRepository {
 
-    //@PersistenceContext
-    private EntityManager em;
+//    @PersistenceContext
+    private final EntityManager em;
 
-    public MemberRepository(EntityManager em) {
-        this.em = em;
-    }
+//    public MemberRepository(EntityManager em) {
+//        this.em = em;
+//    }
 
     public void save(Member member) {
         em.persist(member);
