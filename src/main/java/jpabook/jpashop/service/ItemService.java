@@ -20,6 +20,10 @@ public class ItemService {
         itemRepository.save(item);
     }
 
+    // 준영속 엔티티 : 영속성 컨텍스트가 더는 관리하지 않는 엔티티
+    // 준영속 엔티티를 수정하는 2가지 방법 : 변경 감지 기능 사용, 병합( merge ) 사용
+
+
     public List<Item> findItems() {
         return itemRepository.findAll();
     }
